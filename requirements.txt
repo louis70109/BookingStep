@@ -1,0 +1,8 @@
+fastapi
+uvicorn[standard]
+line-bot-sdk==2.4.2
+openai
+gunicorn
+langchain
+pydantic
+tiktoken
