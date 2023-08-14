@@ -10,7 +10,6 @@
   - [安裝需求](#安裝需求)
   - [使用方法](#使用方法)
   - [Google Cloud Platform 佈署](#google-cloud-platform-佈署)
-    - [gcloud 基礎設定](#gcloud-基礎設定)
   - [參與貢獻](#參與貢獻)
   - [LICENSE](#license)
 
