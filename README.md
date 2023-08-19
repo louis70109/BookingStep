@@ -28,8 +28,9 @@
 
 ## 加入好友
 
-<img src="https://raw.githubusercontent.com/louis70109/calendar-linebot/main/screenshot/qrcode.jpeg" controls="controls" width="300" height="300">
+<img src="https://raw.githubusercontent.com/louis70109/calendar-linebot/main/screenshot/qrcode..jpeg" controls="controls" width="300" height="300">
 
+LINE Bot：https://lin.ee/92O5Od8
 ## 環境變數
 
 你需要設置以下環境變數：
