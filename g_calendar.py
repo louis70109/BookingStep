@@ -10,22 +10,22 @@ class GoogleCalendarGeneratorInput(BaseModel):
 
     dates: str = Field(
         ...,
-        description=f"Datetime symbol for google calendar url.dates format should be like 'YYYYMMDDTHHMMSS/YYYYMMDDTHHMMSS'.Current time {datetime.date.today()}")
+        description=f"Datetime symbol if text contained. format should be 'YYYYMMDDTHHMMSS/YYYYMMDDTHHMMSS'. Current time is {datetime.date.today()}")
     title: str = Field(
         ...,
-        description="Title symbol for google calendar.")
+        description="Calendar Title symbol for reserve schedule.")
     description: str = Field(
         ...,
-        description="Summary text symbol for google calendar url.")
+        description="Calendar Summary text symbol for schedule description.")
     location: str = Field(
         ...,
-        description="Calendar location symbol for google calendar url.")
+        description="Calendar location symbol for reservation.")
 
 
 class CalendarTool(BaseTool):
-    name = "create_google_calendar_url"
+    name = "google_calendar_reservation"
     description = f"""
-Generate Google Calendar API url from CalendarTextSplit text.
+Generate Google Calendar url from user text first when containing time, date.
 """
 
     @staticmethod
@@ -39,6 +39,7 @@ Generate Google Calendar API url from CalendarTextSplit text.
         return event_url+"&openExternalBrowser=1"
 
     def _run(self, dates: str, title: str, description: str, location: str):
+        print('Google Calendar')
         print('時間：'+dates)
         print('標題：'+title)
         print('描述：'+description)

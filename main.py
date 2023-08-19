@@ -1,6 +1,8 @@
 import logging
 import os
 
+from wikipedia import WikiTool
+
 
 if os.getenv('API_ENV') != 'production':
     from dotenv import load_dotenv
@@ -16,7 +18,7 @@ from langchain.chat_models import ChatOpenAI
 from langchain.agents import AgentType
 from langchain.agents import initialize_agent
 from g_calendar import CalendarTool
-from youtube_search import FindYoutubeVideoTool
+from youtube import FindYoutubeVideoTool
 
 logging.basicConfig(level=os.getenv('LOG', 'WARNING'))
 logger = logging.getLogger(__file__)
@@ -28,7 +30,7 @@ model = ChatOpenAI(
     model="gpt-3.5-turbo-0613",
     openai_api_key=os.getenv('OPENAI_API_KEY'))
 
-tools = [CalendarTool(), FindYoutubeVideoTool()]
+tools = [CalendarTool(), FindYoutubeVideoTool(), WikiTool()]
 
 open_ai_agent = initialize_agent(
     tools,

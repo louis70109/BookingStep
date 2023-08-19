@@ -18,6 +18,7 @@ class FindYoutubeVideoTool(BaseTool):
     description = "Find recommendation restaurant from Youtube"
 
     def _run(self, title: str):
+        print("Youtube")
         print('標題：'+title)
         tool = YouTubeSearchTool()
         youtube_str = tool.run(title)  # force change str to list
