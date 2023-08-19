@@ -6,3 +6,4 @@ gunicorn
 langchain
 pydantic
 tiktoken
+youtube_search
