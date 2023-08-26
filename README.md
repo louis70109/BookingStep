@@ -2,11 +2,9 @@
 
 - [BookingStep](#bookingstep)
   - [概述](#概述)
-  - [主要功能](#主要功能)
   - [加入好友](#加入好友)
   - [環境變數](#環境變數)
-  - [安裝需求](#安裝需求)
-  - [使用方法](#使用方法)
+  - [開發方法](#開發方法)
   - [Google Cloud Platform 佈署](#google-cloud-platform-佈署)
     - [一鍵佈署](#一鍵佈署)
     - [gcloud 基礎設定](#gcloud-基礎設定)
@@ -23,14 +21,6 @@
 - 🗓️ 透過 BookingStep 幫你產生 Google 行事曆連結
 - 🍿 不清楚當下的餐廳/餐點，讓 BookingStep 找相關 Youtube 給你看
 - 📖 連眼前這個東西都不知道是什麼？BookingStep 幫你找出解釋
-
-## 主要功能
-
-[![Everything Is AWESOME](https://img.youtube.com/vi/5JTU15VtDAw/0.jpg)](https://www.youtube.com/watch?v=5JTU15VtDAw 'Everything Is AWESOME')
-
-1. 透過 LINE Webhook 接收使用者的文字訊息。
-2. 利用 OpenAI API 處理接收到的文字，並轉換為 Google Calendar 的邀請網址。
-3. 將轉換後的網址回傳給使用者點選。
 
 ## 加入好友
 
@@ -49,17 +39,7 @@ LINE Bot：https://lin.ee/92O5Od8
 - OPENAI_API_KEY: OpenAI 的 API Key。
 - PORT: 預設 8080
 
-## 安裝需求
-
-你需要 Python 3.6 或以上版本的環境來運行此應用程式，並確保安裝以下的 Python 套件：
-
-FastAPI
-python-dotenv
-uvicorn
-line-bot-sdk
-openai
-
-## 使用方法
+## 開發方法
 
 ```
 git clone https://github.com/louis70109/calendar-langchain
