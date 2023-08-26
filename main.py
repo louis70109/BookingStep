@@ -1,5 +1,5 @@
 import logging
-import os
+import os, re
 
 from wikipedia import WikiTool
 
@@ -60,17 +60,20 @@ async def callback(request: Request):
 
 @handler.add(MessageEvent, message=TextMessage)
 def handle_message(event):
-    tool_result = open_ai_agent.run(event.message.text)
-    print('-------------------')
-    print(tool_result)
-    print('-------------------')
-    line_bot_api.reply_message(
-        event.reply_token,
-        [
-            TextSendMessage(text="點選以下網址前，先確認時間地點："),
-            TextSendMessage(
-                text=tool_result)]
-    )
+    message = event.message.text
+    source = event.source.type
+    if (source == 'group' and re.findall('^bot\s*.*\s*.*', message.lower())) or source == 'user':
+        tool_result = open_ai_agent.run(message)
+        print('-------------------')
+        print(tool_result)
+        print('-------------------')
+        line_bot_api.reply_message(
+            event.reply_token,
+            [
+                TextSendMessage(text="點選以下網址前，先確認時間地點："),
+                TextSendMessage(
+                    text=tool_result)]
+        )
 
 
 if __name__ == "__main__":
