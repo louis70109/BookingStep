@@ -1,8 +1,6 @@
-# Google 行事曆產生器 feat: LangChain, LINE Bot
+# BookingStep
 
-## 概述
-
-- [Google 行事曆產生器 feat: LangChain, LINE Bot](#google-行事曆產生器-feat-langchain-line-bot)
+- [BookingStep](#bookingstep)
   - [概述](#概述)
   - [主要功能](#主要功能)
   - [加入好友](#加入好友)
@@ -10,13 +8,21 @@
   - [安裝需求](#安裝需求)
   - [使用方法](#使用方法)
   - [Google Cloud Platform 佈署](#google-cloud-platform-佈署)
+    - [一鍵佈署](#一鍵佈署)
     - [gcloud 基礎設定](#gcloud-基礎設定)
   - [參與貢獻](#參與貢獻)
   - [LICENSE](#license)
 
-![](https://raw.githubusercontent.com/louis70109/calendar-linebot/main/screenshot/user-flow.png)
 
-這是一個用 Python 撰寫的 FastAPI 應用程式，它運用 LangChain 整合 OpenAI，並將處理後的文字訊息轉換成 Google Calendar 連結，並用 LINE Bot 回傳給使用者，可以加入行事曆。
+![](https://raw.githubusercontent.com/louis70109/BookingStep/main/screenshot/user-flow.png)
+
+## 概述
+
+看到一個不知道是什麼的餐廳或食物時是不是覺得困擾？約好時間但卻在出門前忘了？如果有這困擾你可能需要以下的功能：
+
+- 🗓️ 透過 BookingStep 幫你產生 Google 行事曆連結
+- 🍿 不清楚當下的餐廳/餐點，讓 BookingStep 找相關 Youtube 給你看
+- 📖 連眼前這個東西都不知道是什麼？BookingStep 幫你找出解釋
 
 ## 主要功能
 
@@ -31,6 +37,7 @@
 <img src="https://raw.githubusercontent.com/louis70109/calendar-linebot/main/screenshot/qrcode..jpeg" controls="controls" width="300" height="300">
 
 LINE Bot：https://lin.ee/92O5Od8
+
 ## 環境變數
 
 你需要設置以下環境變數：
@@ -89,6 +96,10 @@ sh change_bot_url.sh LINE_ACCESS_TOKEN https://YOUR_DOMAIN/webhooks/line
 10. 之後，您可以在 LINE app 中加入您剛剛建立的 bot 為好友，並開始測試。
 
 ## Google Cloud Platform 佈署
+
+### 一鍵佈署
+
+[![Run on Google Cloud](https://deploy.cloud.run/button.svg)](https://deploy.cloud.run)
 
 Clone 此專案
 
