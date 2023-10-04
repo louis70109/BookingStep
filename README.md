@@ -13,6 +13,7 @@
 
 
 ![](https://raw.githubusercontent.com/louis70109/BookingStep/main/screenshot/user-flow.png)
+簡報分享：https://speakerdeck.com/line_developers_tw/langchain-rookie-google-calendar
 
 ## 概述
 
