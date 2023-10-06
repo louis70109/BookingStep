@@ -43,7 +43,7 @@ LINE Bot：https://lin.ee/92O5Od8
 ## 開發方法
 
 ```
-git clone https://github.com/louis70109/calendar-langchain
+git clone https://github.com/louis70109/BookingStep
 cd calendar-langchain/
 python3 -m venv venv
 source venv/bin/activate
@@ -85,7 +85,7 @@ sh change_bot_url.sh LINE_ACCESS_TOKEN https://YOUR_DOMAIN/webhooks/line
 Clone 此專案
 
 ```
-git clone https://github.com/louis70109/calendar-langchain
+git clone https://github.com/louis70109/BookingStep
 cd calendar-langchain/
 ```
 
