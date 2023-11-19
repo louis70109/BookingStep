@@ -30,7 +30,11 @@ model = ChatOpenAI(
     model="gpt-3.5-turbo-0613",
     openai_api_key=os.getenv('OPENAI_API_KEY'))
 
-tools = [CalendarTool(), FindYoutubeVideoTool(), WikiTool()]
+tools = [
+    CalendarTool(), 
+    FindYoutubeVideoTool(), 
+#    WikiTool()
+]
 
 open_ai_agent = initialize_agent(
     tools,
