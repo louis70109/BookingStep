@@ -42,7 +42,7 @@ open_ai_agent = initialize_agent(
     agent=AgentType.OPENAI_FUNCTIONS,
     verbose=False)
 
-@app.get("/")
+@app.get("/health")
 async def health():
     return 'ok'
 
