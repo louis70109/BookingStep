@@ -42,6 +42,9 @@ open_ai_agent = initialize_agent(
     agent=AgentType.OPENAI_FUNCTIONS,
     verbose=False)
 
+@app.get("/")
+async def health():
+    return 'ok'
 
 @app.post("/webhooks/line")
 async def callback(request: Request):
